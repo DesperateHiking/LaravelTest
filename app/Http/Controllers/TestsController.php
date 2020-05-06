@@ -2,23 +2,16 @@
 
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
+use App\Test;
 
 class TestsController
 {
-    function show($test)
+    function show($id)
     {
-        $tests = [
-            '1' => 'first',
-            '2' => 'second'
-        ];
+        $test = Test::where('id', $id)->firstOrFail();
 
-        if (!array_key_exists($test, $tests)) {
-            abort(404, 'literally nothing');
-        }
 
-        return view('test', [
-            'test' => $tests[$test]
-        ]);
+        return view('test', compact('test'));
     }
 }

@@ -24,7 +24,7 @@
                 <li class="{{ Request::is('/') ? 'current_page_item' : ''}}"><a href="/" accesskey="1" title="">Homepage</a></li>
                 <li class="{{ Request::is('clients') ? 'current_page_item' : ''}}"><a href="#" accesskey="2" title="">Our Clients</a></li>
                 <li class="{{ Request::is('about') ? 'current_page_item' : ''}}"><a href="/about" accesskey="3" title="">About Us</a></li>
-                <li class="{{ Request::is('careers') ? 'current_page_item' : ''}}"><a href="#" accesskey="4" title="">Careers</a></li>
+                <li class="{{ Request::is('articles') ? 'current_page_item' : ''}}"><a href="/articles" accesskey="4" title="">Articles</a></li>
                 <li class="{{ Request::is('contacts') ? 'current_page_item' : ''}}"><a href="#" accesskey="5" title="">Contact Us</a></li>
             </ul>
         </div>
@@ -36,5 +36,7 @@
 <div id="copyright" class="container">
     <p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
 </div>
+
+@yield('test-content')
 </body>
 </html>
